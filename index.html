@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Backtracking-Project</title>
     <style>
         pre{
             color: #660000; 
@@ -13,14 +13,14 @@
     </style>
 </head>
 <body>
-    <h1>Backtracking</h1>
-    <p>Copyright ©2002 by David Matuszek</p>
-    <p>Backtracking is a form of recursion.</p>
+    <h1 style="margin-bottom: 0px;">Backtracking</h1>
+    <p style="margin-top: 0px;">Copyright ©2002 by David Matuszek</p>
+    <p >Backtracking is a form of recursion.</p>
     <p>The usual scenario is that you are faced with a number of options, and you must choose one of these. After you make your choice you will get a new set of options; just what set of options you get depends on what choice you made. This procedure is repeated over and over until you reach a final state. If you made a good sequence of choices, your final state is a goal state; if you didn't, it isn't.</p>
     <p>Conceptually, you start at the root of a tree; the tree probably has some good leaves and some bad leaves, though it may be that the leaves are all good or all bad. You want to get to a good leaf. At each node, beginning with the root, you choose one of its children to move to, and you keep this up until you get to a leaf.</p>
     <p>Suppose you get to a bad leaf. You can backtrack to continue the search for a good leaf by revoking your most recent choice, and trying out the next option in that set of options. If you run out of options, revoke the choice that got you here, and try another choice at that node. If you end up at the root with no options left, there are no good leaves to be found.</p>
     <p>This needs an example.</p>
-    <center ><img src="Asset/Image_root.png" alt="Error" width="50%"></center>
+    <center ><img src="Asset/Image_root.png" alt="Error" width="259px" height="136px"></center>
     <ol type="1">
         <li>Starting at Root, your options are A and B</li>
         <li>You choose A. At A, your options are C and D. You choose C.</li>
@@ -132,7 +132,7 @@
     <p>For starters, let's do the simplest possible example of backtracking, which is searching an actual tree. We will also use the simplest kind of tree, a binary tree.</p>
     <p>For starters, let's do the simplest possible example of backtracking, which is searching an actual tree. We will also use the simplest kind of tree, a binary tree.</p>
     <p>A <b>binary tree</b> is a data structure composed of <b>node</b>. One node is designed as the <b>root node</b>. Each node can reference (point to) zero, one,or, teo other nides, which are called its <b>children</b>. the children are refered to as the <b>letf child</b> and/or <b>rihgt child</b>. All nodes are reachable (by one or more steps) from the root node, and there are no cycles. For our purposes, although this is not part of the definition of a binary tree, we will say that a node might or might not be a goal node, and will contain its name. The first example in this paper (which we repeat here) shows a binary tree.</p>
-    <center><img src="Asset/Image_root.png" alt="Error" width="50%"></center>
+    <center><img src="Asset/Image_root.png" alt="Error" width="259px" height="136px"></center>
     <p>Here's a definition of the BinaryTree class:</p>
     <pre style="color: brown;">
         public class BinaryTree {
@@ -314,7 +314,7 @@
         }
     </pre>
     <p>And we get these results:</p>
-    <pre>
+    <pre style="color:black ;" >
         <strong>
     Entering solvable(Root)
     |  Entering solvable(A)<b>
@@ -396,18 +396,7 @@
     </table>
 </center>
     <p>The goal is to reverse the positions of the marbles:</p>
-     <!-- Image pasted -->
-     <!-- <center>
-        <table border="1" style="width:25% ;border-collapse: collapse;">
-            <tr>
-                <td style="width: 25%;" ><center><img src="./Asset/white-ball.png" alt=""></center></td>
-                <td ><center><img src="Asset/white-ball.png" alt=""></center></td>
-                <td ><center>  </center></td>
-                <td ><center><img src="Asset/black-ball.png" alt=""></center></td>
-                <td ><center><img src="Asset/black-ball.png" alt=""></center></td>
-            </tr>
-        </table>
-    </center> -->
+    
     <center>
         <table border="1" cellspacing="0" cellpadding="6">
             <tbody>
@@ -430,20 +419,7 @@
 
      </ul>
      <p>For example, you could make the following sequence of moves:</p>
-     <!-- image pasted -->
-     <!-- <center>
-       <p><b>Starting position:</b>
-            <table border="1" style="width:25% ;border-collapse: collapse;">
-                <tr>
-                    <td style="width: 25%;"><center><img src="./Asset/white-ball.png" alt=""></center></td>
-                    <td style="width: 25%;"><center><img src="./Asset/white-ball.png" alt=""></center></td>
-                    <td style="width: 25%;"><center>  </center></td>
-                    <td style="width: 25%;"><center><img src="./Asset/black-ball.png" alt=""></center></td>
-                    <td style="width: 25%;"><center><img src="./Asset/black-ball.png" alt=""></center></td>
-                </tr>
-            </table> 
-            </p>
-     </center> -->
+    
     
     <table align="center" border="0" cellpadding="8" cellspacing="0">
         <tbody>
@@ -597,27 +573,9 @@
      </pre>
      <p>Along with canMove and makeMove, we are using methods puzzleSolved And printBoard with meanings that should be obvious.</p>
      <p>Here is some output from the program:</p>
-     <!-- <ol type="1" style="color:blue ;" reversed >
-        <li><pre><b><span style="color:black ;">&nbsp;&nbsp;WHITE  WHITE  WHITE  _____  BLACK  BLACK  BLACK</span></b></pre></li>
-        <li><pre><b><span style="color:black ;">&nbsp;&nbsp;WHITE  WHITE  WHITE  BLACK  _____  BLACK  BLACK</span></b></pre></li>
-        <li><pre><b><span style="color:black ;">&nbsp;&nbsp;WHITE  WHITE  _____  BLACK  WHITE  BLACK  BLACK</span></b></pre></li>
-        <li><pre><b><span style="color:black ;">&nbsp;&nbsp;WHITE  _____  WHITE  BLACK  WHITE  BLACK  BLACK</span></b></pre></li>
-        <li><pre><b><span style="color:black ;">&nbsp;&nbsp;WHITE  BLACK  WHITE  _____  WHITE  BLACK  BLACK</span></b></pre></li>
-        <li><pre><b><span style="color:black ;">&nbsp;&nbsp;WHITE  BLACK  WHITE  BLACK  WHITE  _____  BLACK</span></b></pre></li>
-        <li><pre><b><span style="color:black ;">&nbsp;&nbsp;WHITE  BLACK  WHITE  BLACK  WHITE  BLACK  _____</span></b></pre></li>
-        <li><pre><b><span style="color:black ;">&nbsp;&nbsp;WHITE  BLACK  WHITE  BLACK  _____  BLACK  WHITE</span></b></pre></li>
-        <li><pre><b><span style="color:black ;">&nbsp;&nbsp;WHITE  BLACK  _____  BLACK  WHITE  BLACK  WHITE</span></b></pre></li>
-        <li><pre><b><span style="color:black ;">&nbsp;&nbsp;_____  BLACK  WHITE  BLACK  WHITE  BLACK  WHITE</span></b></pre></li>
-        <li><pre><b><span style="color:black ;">&nbsp;&nbsp;BLACK  _____  WHITE  BLACK  WHITE  BLACK  WHITE</span></b></pre></li>
-        <li><pre><b><span style="color:black ;">&nbsp;&nbsp;BLACK  BLACK  WHITE  _____  WHITE  BLACK  WHITE</span></b></pre></li>
-        <li><pre><b><span style="color:black ;">&nbsp;&nbsp;BLACK  BLACK  WHITE  BLACK  WHITE  _____  WHITE</span></b></pre></li>
-        <li><pre><b><span style="color:black ;">&nbsp;&nbsp;BLACK  BLACK  WHITE  BLACK  _____  WHITE  WHITE</span></b></pre></li>
-        <li><pre><b><span style="color:black ;">&nbsp;&nbsp;BLACK  BLACK  _____  BLACK  WHITE  WHITE  WHITE&nbsp;&nbsp;</span></b></pre></li>
-        <li><pre><b><span style="color:black ;">&nbsp;&nbsp;BLACK  BLACK  BLACK  _____  WHITE  WHITE  WHITE</span></b></pre></li>
+    
 
-     </ol> -->
-
-     <pre  align="left" style="font-size:20px;">
+     <pre  align="left" style="font-size:20px; color: #000;">
 <i><font color="#0000ff">16.</font></i>  <b>WHITE  WHITE  WHITE  _____  BLACK  BLACK  BLACK</b>
 <i><font color="#0000ff">15.</font></i>  <b>WHITE  WHITE  WHITE  BLACK  _____  BLACK  BLACK</b>
 <i><font color="#0000ff">14.</font></i>  <b>WHITE  WHITE  _____  BLACK  WHITE  BLACK  BLACK</b>
